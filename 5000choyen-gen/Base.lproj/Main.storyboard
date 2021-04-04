@@ -82,7 +82,7 @@
                                 <rect key="frame" x="345" y="229" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="上部文字列を「欲しい！」に固定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9F-hd-XfX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="下部文字列を「欲しい！」に固定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9F-hd-XfX">
                                 <rect key="frame" x="20" y="284" width="317" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -141,7 +141,7 @@
                                 <rect key="frame" x="107" y="70" width="200" height="191"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="TQe-id-8Yn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image-2" translatesAutoresizingMaskIntoConstraints="NO" id="TQe-id-8Yn">
                                 <rect key="frame" x="0.0" y="269" width="414" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -149,8 +149,8 @@
                                 <rect key="frame" x="20" y="376" width="384" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text" base64-UTF8="YES">
-VHdpdHRlcuOBp+OCiOOBj+imi+OCizUwMDDlhYblhobvvIHmrLLjgZfjgYTvvIEREeKAqOmiqOOBrueU
-u+WDj+OCkueUn+aIkOOBmeOCi2lPU+OCouODl+ODquOBp+OBmQ
+U05T44Gn44KI44GP6KaL44KLNTAwMOWFhuWGhu+8geassuOBl+OBhO+8gRER4oCo6aKo44Gu55S75YOP
+44KS55Sf5oiQ44GZ44KLaU9T44Ki44OX44Oq44Gn44GZA
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -217,7 +217,7 @@ u+WDj+OCkueUn+aIkOOBmeOCi2lPU+OCouODl+ODquOBp+OBmQ
     </scenes>
     <resources>
         <image name="chevron.left.slash.chevron.right" catalog="system" width="128" height="94"/>
-        <image name="image" width="1675" height="280"/>
+        <image name="image-2" width="1614" height="280"/>
         <image name="info" width="1024" height="1024"/>
         <image name="link" catalog="system" width="128" height="122"/>
         <systemColor name="labelColor">

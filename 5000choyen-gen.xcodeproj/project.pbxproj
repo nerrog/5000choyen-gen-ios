@@ -78,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A825517261B0D8C00F19E11 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9AADB2F826170CD4002457EE /* Main.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
 		9AADB2E626170CD3002457EE = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +109,11 @@
 		9AADB2F126170CD3002457EE /* 5000choyen-gen */ = {
 			isa = PBXGroup;
 			children = (
+				9A825517261B0D8C00F19E11 /* storyboards */,
 				9AADB2F226170CD3002457EE /* AppDelegate.swift */,
 				9AADB2F426170CD3002457EE /* SceneDelegate.swift */,
 				9AADB2F626170CD4002457EE /* ViewController.swift */,
 				9ADF425A2619BEB90090FA13 /* aboutappViewController.swift */,
-				9AADB2F826170CD4002457EE /* Main.storyboard */,
 				9AADB2FB26170CD9002457EE /* Assets.xcassets */,
 				9AADB2FD26170CDA002457EE /* LaunchScreen.storyboard */,
 				9AADB30026170CDA002457EE /* Info.plist */,
@@ -440,20 +448,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4XKKKM86RN;
 				INFOPLIST_FILE = "5000choyen-gen/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = net.nerrog.gosenchoyen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "nerrog Store";
+				PROVISIONING_PROFILE_SPECIFIER = "nerrog dev";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -462,20 +471,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4XKKKM86RN;
 				INFOPLIST_FILE = "5000choyen-gen/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = net.nerrog.gosenchoyen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "nerrog Store";
+				PROVISIONING_PROFILE_SPECIFIER = "nerrog dev";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

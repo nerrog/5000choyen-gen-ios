@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import StoreKit
 
 class ViewController: UIViewController {
 
@@ -14,15 +13,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomtxt: UITextField!
     @IBOutlet weak var gen_img: UIImageView!
     @IBOutlet weak var share: UIBarButtonItem!
+    @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var rainbow: UISwitch!
     @IBOutlet weak var hoshii: UISwitch!
     @IBOutlet weak var single: UISwitch!
     
     var alertController: UIAlertController!
     
+    var image = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //ToolBarの高さを機種ごとに変える
+        let width = UIScreen.main.bounds.size.width
+                let height = UIScreen.main.bounds.size.height
+                //iPhoneX系
+                if height > 800.0 && height < 1000.0{
+                    toolbar.frame = CGRect(x: 0, y: height * 0.92, width: width, height: height * 0.055)
+                }
         //グラデーション用
         //グラデーションの開始色
         let topColor = UIColor(red:0.07, green:0.13, blue:0.26, alpha:1)
@@ -90,7 +100,7 @@ class ViewController: UIViewController {
         let url = URL(string: encodeUrlString)
         do {
                     let data = try Data(contentsOf: url!)
-                    let image = UIImage(data: data)
+                    image = UIImage(data: data)!
                     gen_img.image = image;
                     share.isEnabled = true;
                     
@@ -102,17 +112,19 @@ class ViewController: UIViewController {
         
     }
 
-    @IBAction func share(_ sender: UIBarButtonItem) {
+    @IBAction func share(_ sender: UITabBarItem) {
         //共有モーダルを表示する
-        let image = gen_img.image;
+        //let image = gen_img.image;
         let shareItems = [image]
                 
         let avc = UIActivityViewController(activityItems: shareItems as [Any], applicationActivities: nil)
-                
+        avc.popoverPresentationController?.sourceView = self.view;
+        avc.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width / 2.0, y: self.view.bounds.size.height / 2.0, width: 1.0, height: 1.0);
+        
                 // 使用しないアクティビティタイプ
                 let excludedActivityTypes = [
                     UIActivity.ActivityType.postToWeibo,
-                    UIActivity.ActivityType.airDrop,
+                    //UIActivity.ActivityType.airDrop,
                     UIActivity.ActivityType.assignToContact,
                     UIActivity.ActivityType.addToReadingList,
                     UIActivity.ActivityType.mail,
@@ -121,9 +133,6 @@ class ViewController: UIViewController {
                 avc.excludedActivityTypes = excludedActivityTypes
                 
                 present(avc, animated: true, completion: nil)
-        
-                //評価をお願いする
-                SKStoreReviewController.requestReview()
             }
     
     //ダイアログ表示用関数
@@ -137,7 +146,7 @@ class ViewController: UIViewController {
             present(alertController, animated: true)
         }
     
-    //このAppについてのリンク
+    
     
 
 

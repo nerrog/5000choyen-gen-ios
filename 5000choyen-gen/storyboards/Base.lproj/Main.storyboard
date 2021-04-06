@@ -41,7 +41,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t57-3y-L67">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image-3" translatesAutoresizingMaskIntoConstraints="NO" id="t57-3y-L67">
                                 <rect key="frame" x="20" y="497" width="374" height="261"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -112,12 +112,14 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
                     <connections>
                         <outlet property="bottomtxt" destination="YgV-fX-Div" id="B4P-Bo-LuL"/>
+                        <outlet property="donebtn" destination="vzL-vu-AZZ" id="pP4-w2-O3H"/>
                         <outlet property="gen_img" destination="t57-3y-L67" id="a0V-qU-jLm"/>
                         <outlet property="hoshii" destination="YJg-PZ-PMb" id="dS0-TF-ELs"/>
+                        <outlet property="keyboardbar" destination="JuB-HA-kNb" id="6Jl-Ba-Dqr"/>
                         <outlet property="rainbow" destination="5be-Wq-vWR" id="TE3-MR-59a"/>
                         <outlet property="share" destination="DyA-1m-JZ8" id="LrG-z3-04r"/>
                         <outlet property="single" destination="fFh-96-FzC" id="7yH-yn-Aqy"/>
@@ -126,6 +128,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="JuB-HA-kNb">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ZCq-sH-MJw"/>
+                        <barButtonItem style="done" systemItem="done" id="vzL-vu-AZZ">
+                            <connections>
+                                <action selector="done:" destination="BYZ-38-t0r" id="cGg-6U-VX2"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="-113.04347826086958" y="0.6696428571428571"/>
         </scene>
@@ -152,30 +166,30 @@
                                 <rect key="frame" x="0.0" y="269" width="414" height="123"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright (c) 2021 nerrog.net" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojy-Ya-noM">
-                                <rect key="frame" x="94" y="798" width="226" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright (c) 2021 nerrog.net" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojy-Ya-noM">
+                                <rect key="frame" x="20" y="798" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="link" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SM4-R9-Eer">
-                                <rect key="frame" x="98" y="482" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="98" y="481" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chevron.left.slash.chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GhG-BD-fjl">
                                 <rect key="frame" x="98" y="550" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="link" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Y9w-I5-FSd">
                                 <rect key="frame" x="98" y="626" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nI2-Fj-a9G">
-                                <rect key="frame" x="147" y="481" width="233" height="30"/>
+                                <rect key="frame" x="147" y="480" width="233" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="開発者Twitter"/>
@@ -211,7 +225,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQr-AX-EB7">
-                                <rect key="frame" x="16" y="378" width="382" height="69"/>
+                                <rect key="frame" x="16" y="378" width="382" height="68"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <string key="text" base64-UTF8="YES">
 U05T44Gn44KI44GP6KaL44KLNTAwMOWFhuWGhu+8geassuOBl+OBhO+8gRER4oCo6aKo44Gu55S75YOP
@@ -228,12 +242,13 @@ U05T44Gn44KI44GP6KaL44KLNTAwMOWFhuWGhu+8geassuOBl+OBhO+8gRER4oCo6aKo44Gu55S75YOP
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wex-Ns-KPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="675" y="13.732394366197184"/>
+            <point key="canvasLocation" x="672.46376811594212" y="13.392857142857142"/>
         </scene>
     </scenes>
     <resources>
         <image name="chevron.left.slash.chevron.right" catalog="system" width="128" height="94"/>
         <image name="image-2" width="1614" height="280"/>
+        <image name="image-3" width="1018" height="280"/>
         <image name="info" width="1024" height="1024"/>
         <image name="link" catalog="system" width="128" height="122"/>
         <systemColor name="labelColor">
@@ -241,6 +256,9 @@ U05T44Gn44KI44GP6KaL44KLNTAwMOWFhuWGhu+8geassuOBl+OBhO+8gRER4oCo6aKo44Gu55S75YOP
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

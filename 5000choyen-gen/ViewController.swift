@@ -14,9 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var gen_img: UIImageView!
     @IBOutlet weak var share: UIBarButtonItem!
     @IBOutlet weak var toolbar: UIToolbar!
+    @IBOutlet weak var donebtn: UIBarButtonItem!
     @IBOutlet weak var rainbow: UISwitch!
     @IBOutlet weak var hoshii: UISwitch!
     @IBOutlet weak var single: UISwitch!
+    @IBOutlet var keyboardbar: UIToolbar!
     
     var alertController: UIAlertController!
     
@@ -33,25 +35,8 @@ class ViewController: UIViewController {
                 if height > 800.0 && height < 1000.0{
                     toolbar.frame = CGRect(x: 0, y: height * 0.92, width: width, height: height * 0.055)
                 }
-        //グラデーション用
-        //グラデーションの開始色
-        let topColor = UIColor(red:0.07, green:0.13, blue:0.26, alpha:1)
-        //グラデーションの開始色
-        let bottomColor = UIColor(red:0.54, green:0.74, blue:0.74, alpha:1)
-
-        //グラデーションの色を配列で管理
-        let gradientColors: [CGColor] = [topColor.cgColor, bottomColor.cgColor]
-
-        //グラデーションレイヤーを作成
-        let gradientLayer: CAGradientLayer = CAGradientLayer()
-
-        //グラデーションの色をレイヤーに割り当てる
-        gradientLayer.colors = gradientColors
-        //グラデーションレイヤーをスクリーンサイズにする
-        gradientLayer.frame = self.view.bounds
-
-        //グラデーションレイヤーをビューの一番下に配置
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        toptxt.inputAccessoryView = keyboardbar
+        bottomtxt.inputAccessoryView = keyboardbar
     }
     
 
@@ -102,6 +87,7 @@ class ViewController: UIViewController {
                     let data = try Data(contentsOf: url!)
                     image = UIImage(data: data)!
                     gen_img.image = image;
+                    gen_img.alpha = 1
                     share.isEnabled = true;
                     
 
@@ -118,6 +104,7 @@ class ViewController: UIViewController {
         let shareItems = [image]
                 
         let avc = UIActivityViewController(activityItems: shareItems as [Any], applicationActivities: nil)
+        //この2行を入れないとiPadでは落ちる
         avc.popoverPresentationController?.sourceView = self.view;
         avc.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width / 2.0, y: self.view.bounds.size.height / 2.0, width: 1.0, height: 1.0);
         
@@ -145,11 +132,13 @@ class ViewController: UIViewController {
                                            handler: nil))
             present(alertController, animated: true)
         }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
+    @IBAction func done(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     
-    
-
-
-
 
 }

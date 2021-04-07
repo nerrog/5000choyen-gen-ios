@@ -8,9 +8,11 @@ Windows10 UWP版は[こちら](https://github.com/nerrog/5000choyen-gen)
 
 # インストール
 
+AppStoreから無料でダウンロードできます
+https://apps.apple.com/jp/app/5000%E5%85%86%E5%86%86%E6%AC%B2%E3%81%97%E3%81%84-%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC/id1561524482
+
 git cloneし、XCodeで開き、適切なプロビジョニングプロファイルを選択し、ビルド
 
-AppStoreは現在申請中です。
 
 # 使用APIについて
 

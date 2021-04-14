@@ -3,7 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<string>ja_JP</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>ja</string>
+	</array>
 	<key>CFBundleDisplayName</key>
 	<string>5000兆円欲しい！ジェネレーター</string>
 	<key>CFBundleExecutable</key>

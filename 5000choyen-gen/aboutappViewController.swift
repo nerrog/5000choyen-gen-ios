@@ -36,14 +36,21 @@ class aboutappViewController: UIViewController {
     @IBAction func useapi(_ sender: Any) {
         openlink(link: "http://github.com/CyberRex0/5000choyen-api#readme")
     }
+    
+    @IBAction func Close(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true,completion: nil)
+    }
+    
+    
+    func openlink (link:String){
+            let url = URL(string:link)!
+                    if UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url)
+        }
 }
     
     
     
-func openlink (link:String){
-        let url = URL(string:link)!
-                if UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.open(url)
-    }
+
 }
 

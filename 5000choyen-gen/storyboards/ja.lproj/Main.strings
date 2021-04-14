@@ -1,0 +1,39 @@
+
+/* Class = "UIBarButtonItem"; title = "このAppについて"; ObjectID = "4aZ-81-Of6"; */
+"4aZ-81-Of6.title" = "このAppについて";
+
+/* Class = "UILabel"; text = "上・下どちらかをレンダリング"; ObjectID = "9tc-v4-oid"; */
+"9tc-v4-oid.text" = "上・下どちらかをレンダリング";
+
+/* Class = "UIButton"; normalTitle = "使用APIについて"; ObjectID = "Ksf-FU-fGn"; */
+"Ksf-FU-fGn.normalTitle" = "使用APIについて";
+
+/* Class = "UILabel"; text = "虹色"; ObjectID = "L4E-jl-Esh"; */
+"L4E-jl-Esh.text" = "虹色";
+
+/* Class = "UILabel"; text = "下部文字列を「欲しい！」に固定"; ObjectID = "M9F-hd-XfX"; */
+"M9F-hd-XfX.text" = "下部文字列を「欲しい！」に固定";
+
+/* Class = "UILabel"; text = "Copyright (c) 2021 nerrog.net"; ObjectID = "Ojy-Ya-noM"; */
+"Ojy-Ya-noM.text" = "Copyright (c) 2021 nerrog.net";
+
+/* Class = "UITextField"; placeholder = "下部文字列"; ObjectID = "YgV-fX-Div"; */
+"YgV-fX-Div.placeholder" = "下部文字列";
+
+/* Class = "UIButton"; normalTitle = "生成"; ObjectID = "esD-UQ-ZUd"; */
+"esD-UQ-ZUd.normalTitle" = "生成";
+
+/* Class = "UILabel"; text = "SNSでよく見る5000兆円！欲しい！ 風の画像を生成するiOSアプリです"; ObjectID = "fQr-AX-EB7"; */
+"fQr-AX-EB7.text" = "SNSでよく見る5000兆円！欲しい！ 風の画像を生成するiOSアプリです";
+
+/* Class = "UIButton"; normalTitle = "GitHub"; ObjectID = "h0o-ph-ZBL"; */
+"h0o-ph-ZBL.normalTitle" = "GitHub";
+
+/* Class = "UIButton"; normalTitle = "開発者Twitter"; ObjectID = "nI2-Fj-a9G"; */
+"nI2-Fj-a9G.normalTitle" = "開発者Twitter";
+
+/* Class = "UITextField"; placeholder = "上部文字列"; ObjectID = "rI8-E8-WDX"; */
+"rI8-E8-WDX.placeholder" = "上部文字列";
+
+/* Class = "UINavigationItem"; title = "このAppについて"; ObjectID = "xXP-6V-17F"; */
+"xXP-6V-17F.title" = "このAppについて";

@@ -37,10 +37,13 @@ class ViewController: UIViewController {
                 }
         toptxt.inputAccessoryView = keyboardbar
         bottomtxt.inputAccessoryView = keyboardbar
+        gen_img.isUserInteractionEnabled = true
     }
     
 
     @IBAction func gen(_ sender: Any) {
+        toptxt.endEditing(true)
+        bottomtxt.endEditing(true)
         var apiurl = "https://gsapi.cyberrex.ml/image"
         let top:String = toptxt.text!;
         let btm:String = bottomtxt.text!;
@@ -90,6 +93,7 @@ class ViewController: UIViewController {
                     gen_img.alpha = 1
                     share.isEnabled = true;
                     
+                    
 
                }catch let err {
                 alert(title: "APIエラー",
@@ -99,29 +103,53 @@ class ViewController: UIViewController {
     }
 
     @IBAction func share(_ sender: UITabBarItem) {
-        //共有モーダルを表示する
-        //let image = gen_img.image;
-        let shareItems = [image]
-                
-        let avc = UIActivityViewController(activityItems: shareItems as [Any], applicationActivities: nil)
-        //この2行を入れないとiPadでは落ちる
-        avc.popoverPresentationController?.sourceView = self.view;
-        avc.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width / 2.0, y: self.view.bounds.size.height / 2.0, width: 1.0, height: 1.0);
-        
-                // 使用しないアクティビティタイプ
-                let excludedActivityTypes = [
-                    UIActivity.ActivityType.postToWeibo,
-                    //UIActivity.ActivityType.airDrop,
-                    UIActivity.ActivityType.assignToContact,
-                    UIActivity.ActivityType.addToReadingList,
-                    UIActivity.ActivityType.mail,
-                    UIActivity.ActivityType.message
-                ]
-                avc.excludedActivityTypes = excludedActivityTypes
-                
-                present(avc, animated: true, completion: nil)
+        shareimg()
             }
     
+    
+    @IBAction func longpress(_ sender: UILongPressGestureRecognizer) {
+        
+        shareimg()
+    }
+    
+    
+    @IBAction func clear(_ sender: UIButton) {
+        let ac = UIAlertController(title: "警告", message: "本当に内容をクリアしますか?", preferredStyle: .actionSheet)
+        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: {
+            (action:UIAlertAction!) -> Void in
+            self.toptxt.text = ""
+            self.bottomtxt.text = ""
+        }))
+        ac.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
+        self.present(ac, animated: true, completion: nil)
+    }
+    
+    //共有モーダルを表示する
+    func shareimg(){
+        if share.isEnabled == true{
+            let gen = UINotificationFeedbackGenerator()
+            gen.notificationOccurred(.success)
+            let shareItems = [image]
+                    
+            let avc = UIActivityViewController(activityItems: shareItems as [Any], applicationActivities: nil)
+            //この2行を入れないとiPadでは落ちる
+            avc.popoverPresentationController?.sourceView = self.view;
+            avc.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width / 2.0, y: self.view.bounds.size.height / 2.0, width: 1.0, height: 1.0);
+            
+                    // 使用しないアクティビティタイプ
+                    let excludedActivityTypes = [
+                        UIActivity.ActivityType.postToWeibo,
+                        //UIActivity.ActivityType.airDrop,
+                        UIActivity.ActivityType.assignToContact,
+                        UIActivity.ActivityType.addToReadingList,
+                        UIActivity.ActivityType.mail,
+                        UIActivity.ActivityType.message
+                    ]
+                    avc.excludedActivityTypes = excludedActivityTypes
+                    
+                    present(avc, animated: true, completion: nil)
+            }
+    }
     //ダイアログ表示用関数
     func alert(title:String, message:String) {
             alertController = UIAlertController(title: title,

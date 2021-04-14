@@ -121,6 +121,18 @@ class ViewController: UIViewController {
             self.bottomtxt.text = ""
         }))
         ac.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
+        
+        //iPad
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            ac.popoverPresentationController?.sourceView = self.view
+            let ss = UIScreen.main.bounds
+            ac.popoverPresentationController?.sourceRect =
+                CGRect(x: ss.size.width / 2,
+                       y: ss.size.height,
+                       width: 0,
+                       height: 0)
+            
+        }
         self.present(ac, animated: true, completion: nil)
     }
     

@@ -4,7 +4,7 @@
 
 Windows10 UWP版は[こちら](https://github.com/nerrog/5000choyen-gen)
 
-<img src="https://user-images.githubusercontent.com/48819514/113662999-29a01900-96e4-11eb-80f9-e9c462ab2ab8.png" width="320px">
+<img src="https://user-images.githubusercontent.com/48819514/132093246-da5f7c3f-7fa2-4574-91ae-54131bed9d8b.png" width="320px">
 
 # インストール
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FTLinearActivityIndicator
 
 class ViewController: UIViewController {
 
@@ -44,7 +45,7 @@ class ViewController: UIViewController {
     @IBAction func gen(_ sender: Any) {
         toptxt.endEditing(true)
         bottomtxt.endEditing(true)
-        var apiurl = "https://gsapi.cyberrex.ml/image"
+        var apiurl = "https://gsapi.cyberrex.jp/image"
         let top:String = toptxt.text!;
         let btm:String = bottomtxt.text!;
         
@@ -83,6 +84,8 @@ class ViewController: UIViewController {
         if (rainbow.isOn == true){
             apiurl += "&rainbow=true";
         }
+        //API call
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         let encodeUrlString: String = apiurl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         let url = URL(string: encodeUrlString)
@@ -99,6 +102,7 @@ class ViewController: UIViewController {
                 alert(title: "APIエラー",
                               message: "APIエラーが発生しました\n時間を置いて再度お試しください。\n \(err.localizedDescription)")
                }
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
         
     }
 

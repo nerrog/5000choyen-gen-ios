@@ -1,0 +1,6 @@
+framework module Pods_5000choyen_genTests {
+  umbrella header "Pods-5000choyen-genTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

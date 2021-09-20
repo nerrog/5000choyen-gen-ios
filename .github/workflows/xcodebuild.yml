@@ -1,0 +1,28 @@
+name: build
+ 
+on: [push]
+ 
+env:
+   DEVELOPER_DIR: /Applications/Xcode_12.4.app/Contents/Developer # Xcodeのversion指定
+ 
+jobs:
+   build:
+     runs-on: macos-latest
+     steps:
+       - uses: actions/checkout@v2
+       - name: Cache CocoaPods files
+         uses: actions/cache@v1
+         with:
+           path: Pods
+           key: ${{ runner.os }}-pods-${{ hashFiles('Podfile.lock') }}
+           restore-keys: |
+             ${{ runner.os }}-pods-
+       - run: pod install
+       - name: Build
+         run: xcodebuild -workspace 5000choyen-gen.xcworkspace -scheme 5000choyen-gen -configuration Debug -sdk iphonesimulator
+       - name: Run tests
+         run: xcodebuild
+            -scheme 5000choyen-gen
+            -sdk iphonesimulator
+            -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max'
+            clean test

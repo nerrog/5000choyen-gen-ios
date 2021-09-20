@@ -20,9 +20,9 @@ jobs:
        - run: pod install
        - name: Build
          run: xcodebuild -workspace 5000choyen-gen.xcworkspace -scheme 5000choyen-gen -configuration Debug -sdk iphonesimulator
-       - name: Run tests
-         run: xcodebuild
-            -scheme 5000choyen-gen
-            -sdk iphonesimulator
-            -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max'
-            clean test
+       # - name: Run tests
+       #   run: xcodebuild
+       #      -scheme 5000choyen-gen
+       #      -sdk iphonesimulator
+       #      -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max'
+       #      clean test

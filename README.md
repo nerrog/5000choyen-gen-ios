@@ -1,17 +1,18 @@
 # 5000choyen-gen-ios
 
+[![build](https://github.com/nerrog/5000choyen-gen-ios/actions/workflows/xcodebuild.yml/badge.svg)](https://github.com/nerrog/5000choyen-gen-ios/actions/workflows/xcodebuild.yml)
+
 5000兆円欲しい！ジェネレーターのiOS版です
 
 Windows10 UWP版は[こちら](https://github.com/nerrog/5000choyen-gen)
 
-<img src="https://user-images.githubusercontent.com/48819514/113662999-29a01900-96e4-11eb-80f9-e9c462ab2ab8.png" width="320px">
+<img src="https://user-images.githubusercontent.com/48819514/132093246-da5f7c3f-7fa2-4574-91ae-54131bed9d8b.png" width="320px">
 
 # インストール
 
 AppStoreから無料でダウンロードできます
 https://apps.apple.com/jp/app/5000%E5%85%86%E5%86%86%E6%AC%B2%E3%81%97%E3%81%84-%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC/id1561524482
 
-git cloneし、XCodeで開き、適切なプロビジョニングプロファイルを選択し、ビルド
 
 # リリースノート
 | バージョン (ストアバージョン) | 内容|
@@ -21,6 +22,7 @@ git cloneし、XCodeで開き、適切なプロビジョニングプロファイ
 | 1.0.3 (1.0) | キーボードに閉じるボタンを追加、AppStoreにリリース |
 | 1.1.0 | 長押しで保存できるように、バグ修正 |
 | 1.1.1 (1.1) | iPadでのActionSheetに関するバグ修正、Storeにアップデートをリリース |
+| 1.2.0 (1.2) | APIの仕様変更に伴うURLの変更、その他機能改善、Storeにアップデートをリリース |
 
 # 使用APIについて
 
@@ -35,6 +37,6 @@ APIと通信にはSSL/TLSを使用しています
 
 ・Swift 5.0
 
-・iPhone 11 (iOS14.4.2)
+・iPhone 11 (iOS14.7.1)
 
 ・iPad mini3 (iOS 12.5.2)

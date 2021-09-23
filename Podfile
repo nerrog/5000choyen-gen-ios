@@ -11,10 +11,12 @@ target '5000choyen-gen' do
 
   target '5000choyen-genTests' do
     inherit! :search_paths
+    pod 'FTLinearActivityIndicator'
     # Pods for testing
   end
 
   target '5000choyen-genUITests' do
+    pod 'FTLinearActivityIndicator'
     # Pods for testing
   end
 

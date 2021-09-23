@@ -86,22 +86,27 @@ class ViewController: UIViewController {
         }
         //API call
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
-        let encodeUrlString: String = apiurl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        let url = URL(string: encodeUrlString)
-        do {
-                    let data = try Data(contentsOf: url!)
-                    image = UIImage(data: data)!
-                    gen_img.image = image;
-                    gen_img.alpha = 1
-                    share.isEnabled = true;
-                    
-                    
 
-               }catch let err {
-                alert(title: "APIエラー",
-                              message: "APIエラーが発生しました\n時間を置いて再度お試しください。\n \(err.localizedDescription)")
-               }
+  
+        DispatchQueue.global().async { [self] in
+                let encodeUrlString: String = apiurl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+                let url = URL(string: encodeUrlString)
+                do {
+                    let data = try Data(contentsOf: url!)
+                    self.image = UIImage(data: data)!
+                    self.share.isEnabled = true;
+                    
+                    DispatchQueue.main.async{
+                        self.gen_img.image = image;
+                    }
+
+                }catch let err {
+                    self.alert(title: "APIエラー",
+                               message: "APIエラーが発生しました\n時間を置いて再度お試しください。\n \(err.localizedDescription)")
+                }
+            }
+        
+
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         
     }
@@ -145,9 +150,8 @@ class ViewController: UIViewController {
         if share.isEnabled == true{
             let gen = UINotificationFeedbackGenerator()
             gen.notificationOccurred(.success)
-            let shareItems = [image]
                     
-            let avc = UIActivityViewController(activityItems: shareItems as [Any], applicationActivities: nil)
+            let avc = UIActivityViewController(activityItems: [image], applicationActivities: nil)
             //この2行を入れないとiPadでは落ちる
             avc.popoverPresentationController?.sourceView = self.view;
             avc.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width / 2.0, y: self.view.bounds.size.height / 2.0, width: 1.0, height: 1.0);

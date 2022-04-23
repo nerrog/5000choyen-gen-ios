@@ -97,7 +97,8 @@ class ViewController: UIViewController {
                     self.share.isEnabled = true;
                     
                     DispatchQueue.main.async{
-                        self.gen_img.image = image;
+                        self.gen_img.image = self.image;
+                        self.gen_img.alpha = 1;
                     }
 
                 }catch let err {
@@ -113,18 +114,19 @@ class ViewController: UIViewController {
 
     @IBAction func share(_ sender: UITabBarItem) {
         shareimg()
-            }
+    }
     
     
     @IBAction func longpress(_ sender: UILongPressGestureRecognizer) {
-        
-        shareimg()
+        if (sender.state == UIGestureRecognizer.State.began){
+            directSaveImage()
+        }
     }
     
     
     @IBAction func clear(_ sender: UIButton) {
         let ac = UIAlertController(title: "警告", message: "本当に内容をクリアしますか?", preferredStyle: .actionSheet)
-        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: {
+        ac.addAction(UIAlertAction(title: "クリア", style: .default, handler: {
             (action:UIAlertAction!) -> Void in
             self.toptxt.text = ""
             self.bottomtxt.text = ""
@@ -170,6 +172,39 @@ class ViewController: UIViewController {
                     present(avc, animated: true, completion: nil)
             }
     }
+    
+    //直接保存用
+    func directSaveImage(){
+        if (share.isEnabled){
+            UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.showResultOfSaveImage(_:didFinishSavingWithError:contextInfo:)), nil)
+        }
+    }
+    
+    //上の関数の結果を受け取る関数
+    @objc func showResultOfSaveImage(_ image: UIImage, didFinishSavingWithError error: NSError!, contextInfo: UnsafeMutableRawPointer) {
+        var alert:UIAlertController? = nil
+        let gen = UINotificationFeedbackGenerator()
+
+        if (error != nil){
+            alert = UIAlertController(title: error.localizedDescription , message: error.localizedFailureReason ?? "不明なエラーが発生しました", preferredStyle: .alert)
+            gen.notificationOccurred(.error)
+        }else{
+            alert = UIAlertController(title: "保存済み", message: "カメラロールに保存されました", preferredStyle: .alert)
+            gen.notificationOccurred(.success)
+        }
+        
+        //アラートの表示
+        if (alert != nil){
+            self.present(alert!, animated: true, completion: {
+                // アラートを0.5秒後に閉じる
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                    alert!.dismiss(animated: true, completion: nil)
+                })
+            })
+        }
+        
+    }
+    
     //ダイアログ表示用関数
     func alert(title:String, message:String) {
             alertController = UIAlertController(title: title,

@@ -57,9 +57,9 @@
 		3765DED7CCCCDB05BD9B67FD7F92BF3A /* Pods-5000choyen-gen-5000choyen-genUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-5000choyen-gen-5000choyen-genUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		44AA91BE3DD524CD1696AF8601633D6C /* Pods-5000choyen-genTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-5000choyen-genTests.debug.xcconfig"; sourceTree = "<group>"; };
 		465B8B9A3B68C5360B97E7F92F8464C7 /* Pods-5000choyen-gen-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-5000choyen-gen-acknowledgements.markdown"; sourceTree = "<group>"; };
-		47E594363FC122F3AADC26B2C1DA79A5 /* Pods_5000choyen_gen_5000choyen_genUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_5000choyen_gen_5000choyen_genUITests.framework; path = "Pods-5000choyen-gen-5000choyen-genUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E594363FC122F3AADC26B2C1DA79A5 /* Pods_5000choyen_gen_5000choyen_genUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_5000choyen_gen_5000choyen_genUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B832A8DF90D0ECBAB22E87BD0B6FF30 /* Pods-5000choyen-gen-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-5000choyen-gen-umbrella.h"; sourceTree = "<group>"; };
-		4DC63B90AECC4F2A5C90EB6FC5837EC2 /* Pods_5000choyen_gen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_5000choyen_gen.framework; path = "Pods-5000choyen-gen.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC63B90AECC4F2A5C90EB6FC5837EC2 /* Pods_5000choyen_gen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_5000choyen_gen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51946DB19D2F03D2D24E430700767EAB /* FTLinearActivityIndicator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FTLinearActivityIndicator.debug.xcconfig; sourceTree = "<group>"; };
 		573940AEA594DC6C13BEF77B6DCECAEA /* Pods-5000choyen-gen-5000choyen-genUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-5000choyen-gen-5000choyen-genUITests-frameworks.sh"; sourceTree = "<group>"; };
 		5E569DD62BE278777BE6D99D58BDD168 /* Pods-5000choyen-genTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-5000choyen-genTests-umbrella.h"; sourceTree = "<group>"; };
@@ -73,14 +73,14 @@
 		8B4828D65A8CE847E3194F8B5E5E0911 /* Pods-5000choyen-gen-5000choyen-genUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-5000choyen-gen-5000choyen-genUITests.modulemap"; sourceTree = "<group>"; };
 		8FB365E50A4C6FF194ABAA992F154EDB /* Pods-5000choyen-gen-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-5000choyen-gen-dummy.m"; sourceTree = "<group>"; };
 		957A586BBB5E325F3CA84458AC470E44 /* Pods-5000choyen-gen-5000choyen-genUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-5000choyen-gen-5000choyen-genUITests-dummy.m"; sourceTree = "<group>"; };
-		966BC75FB62BC4260E214CEF65618B38 /* Pods_5000choyen_genTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_5000choyen_genTests.framework; path = "Pods-5000choyen-genTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		966BC75FB62BC4260E214CEF65618B38 /* Pods_5000choyen_genTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_5000choyen_genTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99BF99D234E34D40B1AB022BA2AE1246 /* Pods-5000choyen-gen-5000choyen-genUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-5000choyen-gen-5000choyen-genUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9C790C0627DEB4779ACCECDAD68DCF08 /* FTLinearActivityIndicator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FTLinearActivityIndicator-prefix.pch"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5CB6E9A14F2B7BE805E90F5B1492CBD /* Pods-5000choyen-gen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-5000choyen-gen.release.xcconfig"; sourceTree = "<group>"; };
 		AE6D32535BA31BD6755BE4DA233AE8C9 /* FTLinearActivityIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTLinearActivityIndicator.swift; path = FTLinearActivityIndicator/Classes/FTLinearActivityIndicator.swift; sourceTree = "<group>"; };
 		B1FD17285AA28C71AED2825011880840 /* Pods-5000choyen-genTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-5000choyen-genTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		BBE20CCA63EA4E4E8345F7FBD607937B /* FTLinearActivityIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FTLinearActivityIndicator.framework; path = FTLinearActivityIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBE20CCA63EA4E4E8345F7FBD607937B /* FTLinearActivityIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FTLinearActivityIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89D180E7D83C9A0A30C700F5507E0AF /* Pods-5000choyen-gen-5000choyen-genUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-5000choyen-gen-5000choyen-genUITests-Info.plist"; sourceTree = "<group>"; };
 		CBA012B02B6B8CC2C2EF45C317B539B9 /* FTLinearActivityIndicator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FTLinearActivityIndicator-Info.plist"; sourceTree = "<group>"; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -235,7 +235,6 @@
 				F4CA89B06A15634D930FE5B3E31B3536 /* UIDevice+Extension.swift */,
 				BF6411164ED2280F89DA6F6CDF01E0C7 /* Support Files */,
 			);
-			name = FTLinearActivityIndicator;
 			path = FTLinearActivityIndicator;
 			sourceTree = "<group>";
 		};
@@ -386,7 +385,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1330;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -553,7 +552,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FTLinearActivityIndicator/FTLinearActivityIndicator-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FTLinearActivityIndicator/FTLinearActivityIndicator-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -903,7 +902,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FTLinearActivityIndicator/FTLinearActivityIndicator-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FTLinearActivityIndicator/FTLinearActivityIndicator-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

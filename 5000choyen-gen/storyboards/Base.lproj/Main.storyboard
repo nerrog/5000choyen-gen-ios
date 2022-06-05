@@ -259,6 +259,17 @@ U05T44Gn44KI44GP6KaL44KLNTAwMOWFhuWGhu+8geassuOBl+OBhO+8gRER4oCo6aKo44Gu55S75YOP
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vi3-ZE-3Rd">
+                                <rect key="frame" x="81" y="710" width="252" height="35"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <buttonConfiguration key="configuration" style="gray" title="APIエンドポイントの変更"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontSizeToFitWidth" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeApi:" destination="k04-6B-vmG" eventType="touchUpInside" id="tz4-m0-uhX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lr3-eK-1j4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

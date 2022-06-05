@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     
     var image = UIImage()
     
+    let delegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -45,7 +47,7 @@ class ViewController: UIViewController {
     @IBAction func gen(_ sender: Any) {
         toptxt.endEditing(true)
         bottomtxt.endEditing(true)
-        var apiurl = "https://gsapi.cyberrex.jp/image"
+        var apiurl = delegate.userDefaults.object(forKey: "GSAPI_ENDPOINT") as! String
         let top:String = toptxt.text!;
         let btm:String = bottomtxt.text!;
         
@@ -102,8 +104,10 @@ class ViewController: UIViewController {
                     }
 
                 }catch let err {
-                    self.alert(title: "APIエラー",
-                               message: "APIエラーが発生しました\n時間を置いて再度お試しください。\n \(err.localizedDescription)")
+                    DispatchQueue.main.async{
+                        self.alert(title: "APIエラー",
+                                   message: "APIエラーが発生しました\n時間を置いて再度お試しください。\n \(err.localizedDescription)")
+                    }
                 }
             }
         

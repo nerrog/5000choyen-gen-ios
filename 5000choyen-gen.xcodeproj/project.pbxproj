@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1760746C8F3C07645CB2F111 /* Pods_5000choyen_gen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5598F5CEB5BE0C19046B9325 /* Pods_5000choyen_gen.framework */; };
 		95FBF586A61F1B9383D36F88 /* Pods_5000choyen_gen_5000choyen_genUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E400F8BD24E13CA0141901F /* Pods_5000choyen_gen_5000choyen_genUITests.framework */; };
 		9AADB2F326170CD3002457EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADB2F226170CD3002457EE /* AppDelegate.swift */; };
 		9AADB2F526170CD3002457EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADB2F426170CD3002457EE /* SceneDelegate.swift */; };
@@ -18,6 +17,7 @@
 		9AADB30A26170CDA002457EE /* _000choyen_genTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADB30926170CDA002457EE /* _000choyen_genTests.swift */; };
 		9AADB31526170CDA002457EE /* _000choyen_genUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AADB31426170CDA002457EE /* _000choyen_genUITests.swift */; };
 		9ADF425B2619BEB90090FA13 /* aboutappViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADF425A2619BEB90090FA13 /* aboutappViewController.swift */; };
+		ADEDC61C284CB2E200A1F858 /* Pods_5000choyen_gen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5598F5CEB5BE0C19046B9325 /* Pods_5000choyen_gen.framework */; };
 		F4827BBFC4A5706230E0EDC6 /* Pods_5000choyen_genTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C01893C0EFCD8BB9146E10 /* Pods_5000choyen_genTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +63,8 @@
 		9AADB31426170CDA002457EE /* _000choyen_genUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _000choyen_genUITests.swift; sourceTree = "<group>"; };
 		9AADB31626170CDA002457EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ADF425A2619BEB90090FA13 /* aboutappViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutappViewController.swift; sourceTree = "<group>"; };
+		ADEDC618284CB2CD00A1F858 /* FTLinearActivityIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FTLinearActivityIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADEDC61F284CB3B900A1F858 /* 5000choyen-gen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "5000choyen-gen.entitlements"; sourceTree = "<group>"; };
 		B0C78E01D725F96489860D89 /* Pods-5000choyen-genTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5000choyen-genTests.release.xcconfig"; path = "Target Support Files/Pods-5000choyen-genTests/Pods-5000choyen-genTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3D3C9360777CFEF6032B7D7 /* Pods-5000choyen-genTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5000choyen-genTests.debug.xcconfig"; path = "Target Support Files/Pods-5000choyen-genTests/Pods-5000choyen-genTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA425358FB0197D2484F7DFB /* Pods-5000choyen-gen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5000choyen-gen.debug.xcconfig"; path = "Target Support Files/Pods-5000choyen-gen/Pods-5000choyen-gen.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1760746C8F3C07645CB2F111 /* Pods_5000choyen_gen.framework in Frameworks */,
+				ADEDC61C284CB2E200A1F858 /* Pods_5000choyen_gen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +101,7 @@
 		87B4C578D71B4CEC2B852CBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ADEDC618284CB2CD00A1F858 /* FTLinearActivityIndicator.framework */,
 				9A41F70826E3748F00BCE0EF /* FTLinearActivityIndicator.framework */,
 				5598F5CEB5BE0C19046B9325 /* Pods_5000choyen_gen.framework */,
 				5E400F8BD24E13CA0141901F /* Pods_5000choyen_gen_5000choyen_genUITests.framework */,
@@ -140,6 +143,7 @@
 		9AADB2F126170CD3002457EE /* 5000choyen-gen */ = {
 			isa = PBXGroup;
 			children = (
+				ADEDC61F284CB3B900A1F858 /* 5000choyen-gen.entitlements */,
 				9A825517261B0D8C00F19E11 /* storyboards */,
 				9AADB2F226170CD3002457EE /* AppDelegate.swift */,
 				9AADB2F426170CD3002457EE /* SceneDelegate.swift */,
@@ -606,6 +610,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "5000choyen-gen/5000choyen-gen.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4XKKKM86RN;
@@ -619,6 +624,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.nerrog.gosenchoyen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "nerrog dev";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -630,7 +636,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "5000choyen-gen/5000choyen-gen.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4XKKKM86RN;
 				INFOPLIST_FILE = "5000choyen-gen/Info.plist";
@@ -642,7 +649,8 @@
 				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.nerrog.gosenchoyen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "nerrog dev";
+				PROVISIONING_PROFILE_SPECIFIER = "nerrog Store";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

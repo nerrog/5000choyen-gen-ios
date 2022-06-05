@@ -9,6 +9,8 @@ import UIKit
 
 class aboutappViewController: UIViewController {
 
+    let delegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,6 +42,45 @@ class aboutappViewController: UIViewController {
     @IBAction func Close(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true,completion: nil)
     }
+    
+    @IBAction func changeApi(_ sender: UIButton) {
+        //APIのエンドポイント変更
+        var alertTextField: UITextField?
+
+        let alert = UIAlertController(
+            title: "5000choyen-apiのエンドポイントを指定してください",
+            message: "推奨: https://gsapi.cbrx.io/image",
+            preferredStyle: UIAlertController.Style.alert)
+        alert.addTextField(
+            configurationHandler: {(textField: UITextField!) in
+                alertTextField = textField
+                textField.text = (self.delegate.userDefaults.object(forKey: "GSAPI_ENDPOINT") as! String)
+        })
+        alert.addAction(
+            UIAlertAction(
+                title: "キャンセル",
+                style: UIAlertAction.Style.cancel,
+                handler: nil))
+        alert.addAction(
+            UIAlertAction(
+                title: "デフォルトに戻す",
+                style: UIAlertAction.Style.destructive) {_ in
+                    self.delegate.userDefaults.set("https://gsapi.cbrx.io/image", forKey: "GSAPI_ENDPOINT")
+                })
+        alert.addAction(
+            UIAlertAction(
+                title: "OK",
+                style: UIAlertAction.Style.default) { _ in
+                if let text = alertTextField?.text {
+                    //OK処理
+                    self.delegate.userDefaults.set(text, forKey: "GSAPI_ENDPOINT")
+                }
+            }
+        )
+
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
     
     func openlink (link:String){

@@ -12,11 +12,17 @@ import FTLinearActivityIndicator
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var userDefaults: UserDefaults!
 
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-            UIApplication.configureLinearNetworkActivityIndicatorIfNeeded()
+        UIApplication.configureLinearNetworkActivityIndicatorIfNeeded()
+        
+        //ユーザー設定の準備
+        userDefaults = UserDefaults.standard
+        userDefaults.register(defaults: ["GSAPI_ENDPOINT": "https://gsapi.cbrx.io/image"])
+        
         return true
     }
 
